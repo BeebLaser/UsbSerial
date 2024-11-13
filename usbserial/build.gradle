@@ -3,11 +3,11 @@ apply plugin: 'com.android.library'
 def artifact = "usbserial.jar"
 
 android {
-
+    if (project.android.hasProperty('namespace')) namespace 'com.felhr.usbserial'
     group = 'com.felhr.usbserial'
     version = project.VERSION_NAME
 
-    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    compileSdk Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
 
     compileOptions {
         encoding "UTF-8"
