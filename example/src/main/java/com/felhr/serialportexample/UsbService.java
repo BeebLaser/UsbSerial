@@ -241,7 +241,7 @@ public class UsbService extends Service {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             mPendingIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), PendingIntent.FLAG_MUTABLE);
         } else {
-            mPendingIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), 0);
+            mPendingIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_USB_PERMISSION), 33554432);
         }
         usbManager.requestPermission(device, mPendingIntent);
     }
